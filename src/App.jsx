@@ -9,7 +9,7 @@ function App() {
 const [principle, setPrinciple] = useState("")
 const [rate, setRate] = useState("")
 const [year, setYear] = useState("")
-const [interest, setInterest] = useState("")
+const [interest, setInterest] = useState(0)
 
 const [isprinciple, setisPrinciple] = useState(true)
 const [israte, setisRate] = useState(true)
@@ -73,7 +73,7 @@ const handleCalculate = ()=>{
   setInterest((principle*rate*year)/100)
 
   }
-}
+
 
   return (
     <>
@@ -86,7 +86,7 @@ const handleCalculate = ()=>{
               <h1>Simple Interest App</h1>
               <p>Calculate your simple interest easily</p>
               <div className="bg-warning d-flex justify-content-center align-items-center p-3 rounded mt-4 flex-column">
-                <h1>₹ (interest)</h1>
+                <h1>₹{interest}</h1>
                 <p>Total Simple Interest</p>
               </div>
               <div className="my-3">
